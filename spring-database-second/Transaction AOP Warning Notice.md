@@ -28,3 +28,13 @@ world는 Transcation Proxy가 아닌 this 즉 자신의 hello를 호출하게 �
 코드를 쓸때 이 점을 주의 해야 한다.
 
 간단한 해결방법으로는 hello메서드를 다른 클래스로 빼서 사용하는 법이 있다.
+
+클래스로 빼서 사용하는 경우
+
+내부호출 -> 외부호출로 전환 되기에 위와 같은 경우를 방지 할 수 있다.
+
+그리고 Spring Transaction은 pulbic method에만 걸린다.
+
+클래스레벨에 Transaction을 선언한 경우 public으로 선언된 method에만 트랜잭션이 적용 된다.
+
+Transaction을 선언하는 메소드의 경우 `외부에서 호출 되는 시작점`에 선언한다!
