@@ -21,3 +21,8 @@
 스프링 트랜잭션 AOP의 적용이 안되는 경우를 알아봄.
 
 [[Transaction AOP Warning Notice]]
+
+스프링 트랜잭션을 사용하는경우 옵션을 통해 사용 범위나 기능을 추가 및 수정할 수 있다.
+
+[[Spring Transaction Options]]
+
