@@ -32,7 +32,7 @@ hello world -> user mode -> kernel -> interrept 발생 이런 순임.
 3. 프로그램 상의 오류
 4. CPU가 인스트럭션을 수행하는 도중에 일어나는 인터럽트
 
-### ISR (Interrupt Service Routine)
+# ISR (Interrupt Service Routine)
 
 isr은 인터럽트 핸들러라고도 한다.
 
