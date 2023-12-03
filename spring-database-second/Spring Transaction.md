@@ -27,3 +27,5 @@
 [[Spring Transaction Options]]
 
 DB트랜잭션으로 묶어서 커밋 or 롤백
+
+[[커밋 롤백]]
