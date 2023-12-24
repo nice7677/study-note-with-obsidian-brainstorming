@@ -16,3 +16,19 @@
 현재는 Provider를 사용하면댐.
 
 다른 방법으로는 JSR-330 Provider를 사용하면댄다.
+
+# 프록시
+스프링에서 제공하는 스코프 프록시 기능을 사용할 수 있음.
+CGLIB으로 프록시 객체를 사용해 기존에 ObjectProvider를 사용하던 넘을 대체함.
+
+```java
+ @Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
+```
+
+proxyMode를 상황에 맞게 적용해 주면 된다. TARGET_CLASS or INTERFACE ...
+
+사실 Provider를 사용하든, 프록시를 사용하든 핵심 아이디어는 **진짜 객체 조회를 꼭 필요한 시점까지ㄴ 지연처리 한다는 점이다.**
+
+**주의점**
+마치 싱글톤을 사용하는 것 같지만 다르게 동작하기 때문에 결국 주의해서 사용해야 한다.  
+이런 특별한 scope는 꼭 필요한 곳에만 최소화해서 사용하자, 무분별하게 사용하면 유지보수하기 어려워진다.
